@@ -59,7 +59,7 @@ class BaseTIDep:
         """
         return getattr(self, 'NAME', self.__class__.__name__)
 
-    def _get_dep_statuses(self, ti, session, dep_context=None):
+    def _get_dep_statuses(self, ti, session, dep_context):
         """
         Abstract method that returns an iterable of TIDepStatus objects that describe
         whether the given task instance has this dependency met.
