@@ -16,6 +16,8 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
+""" Contains definition for class BaseTIDep (Base Task Dependency) and
+namedtuple TIDepStatus (Dependency status)"""
 
 from collections import namedtuple
 
@@ -41,7 +43,7 @@ class BaseTIDep:
         pass
 
     def __eq__(self, other):
-        return type(self) == type(other)
+        return type(self) is type(other)
 
     def __hash__(self):
         return hash(type(self))
